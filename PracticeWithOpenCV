@@ -1,0 +1,19 @@
+# Practice:  Code to load and show images in OpenCV using Python
+
+# Importing necessary packages
+
+import numpy as np
+import argparse
+import cv2
+
+# Initialize argument parser and parse arguments
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-i", "--image", required = True, help = "Path to the image"
+args = vars(ap.parse_args())
+
+# Load & Show image
+
+image = cv2.imread(args["image"])
+cv2.imshow("Image", image)
+cv2.waitKey(0)
